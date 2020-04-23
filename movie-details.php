@@ -61,7 +61,7 @@ $str = "<div >
 if(count($json) > 2)
     return $str;
 else
-	return "<center>No detials of that id </center>";
+	return "<h5>No Movie with that IMDB ID</h5>";
 
 
        // $curl=curl_init();
