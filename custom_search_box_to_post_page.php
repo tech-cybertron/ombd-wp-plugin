@@ -24,7 +24,7 @@ function movie_finder_meta_box_callback() {
 	echo "<label for=movie_name>Enter Movie Name : </label>";
 	echo "<input type=text placeholder='Enter Movie Name' id='mn2' name=movie_name ></input>";
 	echo "<input type='button' class='button-primary' name='find' value='find' onclick='ok()' ><br>";
-	echo "<div  id='moviedetail'><div class=container><h3 id=movietitle></h3><p id=movieactors></p></div></div><br>";
+	echo "<div  id='moviedetail'><img id=movieposter><div class=container><h3 id=movietitle></h3><p id=movieactors></p></div></div><br>";
   echo "<input type=text id='txtval'></input><hr>";
   echo "<input type='button' onclick='myFunction()' value='Copy Short Code' ></input>";
   echo "</form>";
@@ -60,7 +60,7 @@ function movie_finder_meta_box_callback() {
           var id = arrVal["imdbID"].substring(2);
           var imgdet = document.getElementById("moviedetail");
           imgdet.classList.add("card");
-          var x = document.createElement("IMG");
+          var x = document.getElementById("movieposter");
           x.setAttribute("src", arrVal["Poster"]);
           x.setAttribute("width", "200");
           x.setAttribute("height", "150");
